@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BaBachios.net</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,Arial,sans-serif;
+}
+
+body{
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* ===== MENU ===== */
+
+.menu{
+    position:relative;
+    width:420px;
+    padding:4px;
+    border-radius:18px;
+    background:linear-gradient(
+    45deg,
+    red,
+    orange,
+    yellow,
+    lime,
+    cyan,
+    blue,
+    violet,
+    red);
+
+    animation:borderMove 4s linear infinite;
+}
+
+.menu::before{
+    content:"";
+    position:absolute;
+    inset:-3px;
+    border-radius:20px;
+    background:inherit;
+    filter:blur(12px);
+    opacity:.9;
+    z-index:-1;
+}
+
+@keyframes borderMove{
+    100%{
+        filter:hue-rotate(360deg);
+    }
+}
+
+.inner{
+    background:#0a0a0a;
+    border-radius:16px;
+    padding:20px;
+}
+
+/* ===== LOGO ===== */
+
+.logo{
+
+    font-size:42px;
+    text-align:center;
+    font-weight:900;
+    color:#ffd800;
+
+    text-shadow:
+    0 0 8px gold,
+    0 0 18px gold,
+    0 0 35px #fff200,
+    0 0 60px #fff;
+
+    animation:gold 1.2s infinite alternate;
+}
+
+@keyframes gold{
+
+from{
+transform:scale(1);
+}
+
+to{
+transform:scale(1.02);
+text-shadow:
+0 0 10px gold,
+0 0 25px gold,
+0 0 50px yellow,
+0 0 90px white;
+}
+
+}
+
+.small{
+text-align:center;
+margin-top:5px;
+color:white;
+font-size:15px;
+letter-spacing:3px;
+}
+
+/* ===== TITLE ===== */
+
+.title{
+
+margin-top:18px;
+text-align:center;
+font-size:33px;
+font-weight:bold;
+
+background:linear-gradient(
+90deg,
+red,
+orange,
+yellow,
+lime,
+cyan,
+blue,
+violet,
+red);
+
+background-size:400%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:rainbow 4s linear infinite;
+text-shadow:0 0 15px white;
+
+}
+
+@keyframes rainbow{
+0%{background-position:0%;}
+100%{background-position:400%;}
+}
+
+/* ===== BOX ===== */
+
+.box{
+margin-top:18px;
+background:#121212;
+border:1px solid #333;
+border-radius:12px;
+padding:15px;
+box-shadow:0 0 12px rgba(255,255,255,.15);
+}
+
+.section{
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:11px 0;
+border-bottom:1px solid #333;
+}
+
+.section:last-child{
+border:none;
+}
+
+.name{
+color:white;
+font-size:18px;
+}
+
+/* SWITCH */
+
+.switch{
+
+width:55px;
+height:28px;
+background:#333;
+border-radius:50px;
+position:relative;
+cursor:pointer;
+transition:.3s;
+
+}
+
+.switch::after{
+
+content:"";
+position:absolute;
+width:22px;
+height:22px;
+background:white;
+border-radius:50%;
+top:3px;
+left:3px;
+transition:.3s;
+
+}
+
+.switch.on{
+
+background:linear-gradient(
+90deg,
+red,
+orange,
+yellow,
+lime,
+cyan,
+blue,
+violet);
+
+box-shadow:0 0 10px cyan;
+
+}
+
+.switch.on::after{
+left:30px;
+}
+
+/* ===== FOOTER ===== */
+
+.footer{
+margin-top:20px;
+text-align:center;
+color:#888;
+font-size:13px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="menu">
+
+<div class="inner">
+
+<div class="logo">
+BaBachios.net
+</div>
+
+<div class="small">
+MENU ANTIBAN
+</div>
+
+<div class="title">
+FREE FIRE AIM MENU
+</div>
+
+<div class="box">
+
+<div class="section">
+<div class="name">Aimbot (Demo)</div>
+<div class="switch on"></div>
+</div>
+
+<div class="section">
+<div class="name">Head (Demo)</div>
+<div class="switch"></div>
+</div>
+
+<div class="section">
+<div class="name">Body (Demo)</div>
+<div class="switch on"></div>
+</div>
+
+<div class="section">
+<div class="name">ESP (Demo)</div>
+<div class="switch"></div>
+</div>
+
+<div class="section">
+<div class="name">Crosshair (Demo)</div>
+<div class="switch on"></div>
+</div>
+
+<div class="section">
+<div class="name">FOV Circle (Demo)</div>
+<div class="switch"></div>
+</div>
+
+<div class="section">
+<div class="name">FPS Boost (Demo)</div>
+<div class="switch on"></div>
+</div>
+
+<div class="section">
+<div class="name">Theme RGB</div>
+<div class="switch on"></div>
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 BaBachios.net • UI Demo Only
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
